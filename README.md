@@ -11,7 +11,6 @@ The objective is to transform raw data into meaningful insights that support dat
 ---
 
 ## 🎯 Objectives
-
 • Analyze overall sales performance and revenue trends
 • Identify top customers and high-value segments
 • Evaluate product category performance
