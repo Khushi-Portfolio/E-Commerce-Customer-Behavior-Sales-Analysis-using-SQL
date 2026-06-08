@@ -1,4 +1,4 @@
-# 📊 E-Commerce Customer Behavior & Sales Analysis using SQL
+# 📊 E-Commerce Customer Behavior & Sales Analysis  SQL
 
 ---
 
