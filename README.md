@@ -1,6 +1,8 @@
 # 📊 E-Commerce Customer Behavior & Sales Analysis using SQL
 
- 📌 Project Overview
+---
+
+## 📌 Project Overview
 
 This project analyzes an e-commerce dataset to understand customer behavior, sales performance, and business trends using SQL. The dataset includes customer demographics, transaction details, and behavioral metrics.
 
@@ -9,15 +11,20 @@ The objective is to transform raw data into meaningful insights that support dat
 ---
 
 ## 🎯 Objectives
+
 • Analyze overall sales performance and revenue trends
 • Identify top customers and high-value segments
 • Evaluate product category performance
 • Understand customer behavior based on demographics
 • Analyze the impact of delivery time and customer ratings
 • Examine payment methods and device usage patterns
+
 ---
+
 ## 🗂️ Project Structure
+
 ---
+
 ### 📁 Dataset Information
 
 | Column Name              | Data Type      | Description                            | Example     |
@@ -40,13 +47,18 @@ The objective is to transform raw data into meaningful insights that support dat
 | Is_Returning_Customer    | BOOLEAN        | Indicates repeat customer              | TRUE        |
 | Delivery_Time_Days       | INT            | Delivery time in days                  | 5           |
 | Customer_Rating          | INT            | Rating given by customer (1–5)         | 4           |
+
 ---
+
 ### 🧹 Data Cleaning
+
 • Checked for missing (NULL) values — none found
 • Converted Date column into proper DATE format
 • Verified data types for all columns
 • Ensured consistency in categorical values
+
 ---
+
 ### 📊 Data Analysis (SQL Queries)
 
 #### 💰 Total Revenue
