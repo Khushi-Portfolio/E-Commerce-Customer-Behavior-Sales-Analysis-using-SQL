@@ -1,21 +1,30 @@
 # 📊 E-Commerce Customer Behavior & Sales Analysis using SQL
+
 ---
+
 ## 📌 Project Overview
 
 This project analyzes an e-commerce dataset to understand customer behavior, sales performance, and business trends using SQL. The dataset includes customer demographics, transaction details, and behavioral metrics.
 
 The objective is to transform raw data into meaningful insights that support data-driven decision-making in business and marketing.
+
 ---
+
 ## 🎯 Objectives
+
 • Analyze overall sales performance and revenue trends
 • Identify top customers and high-value segments
 • Evaluate product category performance
 • Understand customer behavior based on demographics
 • Analyze the impact of delivery time and customer ratings
 • Examine payment methods and device usage patterns
+
 ---
+
 ## 🗂️ Project Structure
+
 ---
+
 ### 📁 Dataset Information
 
 | Column Name              | Data Type      | Description                            | Example     |
@@ -40,78 +49,115 @@ The objective is to transform raw data into meaningful insights that support dat
 | Customer_Rating          | INT            | Rating given by customer (1–5)         | 4           |
 
 ---
- 🧹 Data Cleaning
+
+### 🧹 Data Cleaning
+
 • Checked for missing (NULL) values — none found
 • Converted Date column into proper DATE format
 • Verified data types for all columns
 • Ensured consistency in categorical values
+
 ---
- 📊 Data Analysis (SQL Queries)
 
- 💰 Total Revenue
+### 📊 Data Analysis (SQL Queries)
+
+#### 💰 Total Revenue
+
+```sql
 SELECT SUM(Total_Amount) AS total_revenue FROM ecommerce;
+```
 
-👥 Top Customers
+#### 👥 Top Customers
+
+```sql
 SELECT Customer_ID, SUM(Total_Amount) AS spending
 FROM ecommerce
 GROUP BY Customer_ID
 ORDER BY spending DESC
 LIMIT 5;
+```
 
- 🛒 Sales by Category
+#### 🛒 Sales by Category
+
+```sql
 SELECT Product_Category, SUM(Total_Amount) AS revenue
 FROM ecommerce
 GROUP BY Product_Category
 ORDER BY revenue DESC;
+```
 
- 💳 Payment Method Analysis
+#### 💳 Payment Method Analysis
+
+```sql
 SELECT Payment_Method, SUM(Total_Amount) AS revenue
 FROM ecommerce
 GROUP BY Payment_Method;
+```
 
-📱 Device Type Analysis
+#### 📱 Device Type Analysis
+
+```sql
 SELECT Device_Type, SUM(Total_Amount) AS revenue
 FROM ecommerce
 GROUP BY Device_Type;
+```
 
-⭐ Customer Rating Impact
+#### ⭐ Customer Rating Impact
+
+```sql
 SELECT Customer_Rating, AVG(Total_Amount) AS avg_spending
 FROM ecommerce
 GROUP BY Customer_Rating;
+```
 
- 🌆 Top Cities by Revenue
+#### 🌆 Top Cities by Revenue
+
+```sql
 SELECT City, SUM(Total_Amount) AS revenue
 FROM ecommerce
 GROUP BY City
 ORDER BY revenue DESC
 LIMIT 5;
+```
 
- 📦 Most Purchased Category
+#### 📦 Most Purchased Category
+
+```sql
 SELECT Product_Category, SUM(Quantity) AS total_quantity
 FROM ecommerce
 GROUP BY Product_Category
 ORDER BY total_quantity DESC;
-
+```
 
 #### 🚚 Delivery Time Impact
+
+```sql
 SELECT Delivery_Time_Days, AVG(Customer_Rating) AS avg_rating
 FROM ecommerce
 GROUP BY Delivery_Time_Days;
+```
 
+#### 🏆 Top Products by Revenue
 
- 🏆 Top Products by Revenue
+```sql
 SELECT Product_Category, SUM(Total_Amount) AS revenue
 FROM ecommerce
 GROUP BY Product_Category
 ORDER BY revenue DESC
 LIMIT 5;
+```
 
- 🚻 Gender-wise Spending
+#### 🚻 Gender-wise Spending
+
+```sql
 SELECT Gender, AVG(Total_Amount) AS avg_spending
 FROM ecommerce
 GROUP BY Gender;
+```
 
- 👨‍👩‍👧 Age Group Analysis
+#### 👨‍👩‍👧 Age Group Analysis
+
+```sql
 SELECT 
     CASE 
         WHEN Age < 25 THEN 'Young'
@@ -121,8 +167,11 @@ SELECT
     AVG(Total_Amount) AS avg_spending
 FROM ecommerce
 GROUP BY age_group;
+```
+
 ---
- 📈 Key Insights
+
+## 📈 Key Insights
 
 • 💰 Overall revenue is strong, indicating good business performance
 
@@ -147,15 +196,21 @@ GROUP BY age_group;
 • 🚻 Spending patterns differ across genders
 
 • 👨‍👩‍👧 Different age groups show different buying behavior
+
 ---
- 🛠️ Tools and Technologies
+
+## 🛠️ Tools and Technologies
+
 • SQL (MySQL)
 • Excel
 • phpMyAdmin
+
 ---
- 🏁 Conclusion
+
+## 🏁 Conclusion
 
 This project demonstrates how SQL can be used to analyze e-commerce data and generate meaningful business insights. The analysis highlights customer behavior patterns, key revenue drivers, and operational factors such as delivery efficiency and customer satisfaction.
 
 The insights derived can help businesses improve marketing strategies, optimize operations, and enhance overall customer experience.
+
 ---
